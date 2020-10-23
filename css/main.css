@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    /* border:1px solid red; */
+}
+
+.wrap{
+    width:360px;
+    height:740px;
+    margin: 0 auto;
+    background-color:rgb(242 253 255)
+}
+
+.wrap .title h2{
+    text-align: center;
+    padding-top: 170px;
+    border:1px solid red;
+}
+
+.wrap button{
+    background-color:rgb(212 240 245);
+    padding:50px;
+    font-size:
+}
