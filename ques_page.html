@@ -15,7 +15,7 @@
 <body>
     <div class="sub_wrap">
         <div class="num">
-            <h3><span id="ques_num"></span>/12</h3>
+            <h3><span id="ques_num"></span></h3>
         </div>
         <div class="ques">
             <h2 id="ques"></h2>
@@ -27,10 +27,11 @@
     </div>
 
     <script>
-        const ques_num = document.querySelector('#ques_num');
+        const quesNum = document.querySelector('#ques_num');
+        // const totalNum = document.querySelector('#total_num');
         const ques = document.querySelector('#ques');
-        const answer_1 = document.querySelector('#answer_1');
-        const answer_2 = document.querySelector('#answer_2');
+        const answer1 = document.querySelector('#answer_1');
+        const answer2 = document.querySelector('#answer_2');
 
         answer_1.addEventListener('click', nextQues)
         answer_2.addEventListener('click', nextQues)
@@ -58,24 +59,24 @@
             },
         ]
 
-        ques_num.textContent = 1
-        ques.textContent = questions[0].title
-        answer_1.textContent = questions[0].answers[0]
-        answer_2.textContent = questions[0].answers[1]
+        // totalNum.textContent = questions.length
 
-        let quesStartN = 2
+        let pageNum = 0;
+        upDateQues(pageNum)
 
         function nextQues(e) {
             e.preventDefault();
 
-            // 클릭 할때마다 질문 숫자 카운팅 function
-            ques_num.textContent = quesStartN++
+            pageNum++
+            upDateQues(pageNum)
 
-            // 버튼 클릭할때마다 다음 질문으로 카운팅
-            ques.textContent = questions[`${quesStartN-2}`].title
-            answer_1.textContent = questions[`${quesStartN-2}`].answers[0]
-            answer_2.textContent = questions[`${quesStartN-2}`].answers[1]
+        }
 
+        function upDateQues(pageNum) {
+            quesNum.textContent = `${pageNum + 1}/${questions.length}`
+            ques.textContent = questions[pageNum].title
+            answer1.textContent = questions[pageNum].answers[0]
+            answer2.textContent = questions[pageNum].answers[1]
         }
 
         // $.ajax({
@@ -86,6 +87,7 @@
 
         //     }
         // });
+
     </script>
 </body>
 
