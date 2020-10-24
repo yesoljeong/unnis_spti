@@ -1,11 +1,18 @@
 /* MAIN PAGE */
+html,
+body,
+.wrap,
+.sub_wrap {
+    background-color: rgb(242 253 255);
+    height: 100%;
+}
+
 .wrap,
 .sub_wrap {
     width: 360px;
     margin: 0 auto;
-    background-color: rgb(242 253 255);
     position: relative;
-    border:1px solid red;
+    border: 1px solid red;
 }
 
 .wrap .logo {
@@ -24,10 +31,11 @@
 }
 
 .wrap .title h2 {
+    padding-top: 30%;
     font-family: 'Roboto', sans-serif;
     color: rgb(79 79 79);
     text-align: center;
-    padding-top: 170px;
+    border: 1px solid red;
     margin-bottom: 10px;
     line-height: 37px;
     font-size: 28px;
@@ -46,12 +54,17 @@
     text-align: center;
 }
 
+.wrap .btn .now_count {
+    font-size: 14px;
+}
+
 .wrap button {
-    background-color: rgb(212 240 245);   
+    background-color: rgb(212 240 245);
     border-radius: 10px;
     border: 0;
     box-shadow: 5px 5px 10px 2px rgba(183, 208, 212, 0.8);
-    margin-top: 50px;
+    margin-top: 80px;
+    width: 80%;
 }
 
 .wrap button a {
@@ -60,8 +73,9 @@
     font-weight: 900;
     font-weight: 900;
     font-size: 21px;
-    padding: 15px 50px;
-    display:block;
+    padding: 15px 0;
+    display: block;
+    width: 100%;
 }
 
 .wrap .img div {
@@ -77,7 +91,6 @@
 
 /* SUB PAGE */
 .sub_wrap .num {
-    /* border: 1px solid red; */
     text-align: center;
     padding-top: 150px;
 }
@@ -110,11 +123,11 @@
     box-shadow: 5px 5px 10px 2px rgba(183, 208, 212, 0.8);
     margin-top: 30px;
     text-align: center;
-    width:80%;
+    width: 80%;
 }
 
 .sub_wrap .btn button a {
-    display:block;
+    display: block;
     padding: 20px 0;
     font-family: 'Roboto', sans-serif;
     color: rgb(79 79 79);

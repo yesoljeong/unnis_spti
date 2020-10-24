@@ -43,7 +43,7 @@
     border: 1px solid red;
     display: flex;
     justify-content: space-between;
-    width:90%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -51,7 +51,7 @@
     border: 1px solid rgb(196 196 196);
     border-radius: 10px;
     padding: 15px;
-    width:47%;
+    width: 47%;
 }
 
 .sub_matching h4 {
@@ -61,15 +61,60 @@
     font-size: 14px;
 }
 
-.sub_matching h5{
+.sub_matching h5 {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     text-align: center;
 }
 
 .sub_matching .item>div,
-.sub_matching .idol>div{
-    border:1px solid red;
-    height:100px;
+.sub_matching .idol>div {
+    border: 1px solid red;
+    height: 100px;
     margin: 20px 0;
+}
+
+.share {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid red;
+}
+
+.share>div {
+    width: 50%;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.share .icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 50%;
+    background-color: rgb(212 240 245);
+    margin: 0 auto;
+}
+
+.share i {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.share p {
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.more h2 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(79 79 79);
+}
+
+.more span{
+    font-weight: 900;
 }

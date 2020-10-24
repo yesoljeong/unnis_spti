@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mbti 가제</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="sub_wrap">
+        <div class="num">
+            <h3><span id="ques_num">1</span>/12</h3>
+        </div>
+        <div class="ques">
+            <h2 id="ques">당신의 성별은?</h2>
+        </div>
+        <div class="btn">
+            <button><a href="" id="answer_1">남자</a></button>
+            <button><a href="" id="answer_2">여자</a></button>
+        </div>
+    </div>
+
+    <script>
+        const ques_num = document.querySelector('#ques_num');
+        const ques = document.querySelector('#ques');
+        const answer_1 = document.querySelector('#answer_1');
+        const answer_2 = document.querySelector('#answer_2');
+
+        answer_1.addEventListener('click', nextQues)
+        answer_2.addEventListener('click', nextQues)
+
+        // 클릭 할때마다 질문 숫자 카운팅 function
+        let quesStartNum = 2
+
+        function nextQues(e) {
+            e.preventDefault();
+            ques_num.textContent = quesStartNum++
+        }
+
+        const questions = [{
+                'title': '질문1',
+                'answers': [
+                    '질문1 답1',
+                    '질문1 답2'
+                ]
+            },
+            {
+                'title': '질문2',
+                'answers': [
+                    '질문2 답1',
+                    '질문2 답2'
+                ]
+            }
+        ]
+
+        ques.textContent = questions[0].title
+        answer_1.textContent = questions[0].answers[0]
+        answer_2.textContent = questions[0].answers[1]
+
+        console.log(questions[0].title)
+        console.log(questions[0].answers[0])
+        console.log(questions[0].answers[1])
+
+
+        // $.ajax({
+        //     type: "GET",
+        //     url: "",
+        //     data: {},
+        //     success: function (response) {
+
+        //     }
+        // });
+    </script>
+</body>
+
+</html>
