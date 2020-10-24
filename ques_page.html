@@ -15,14 +15,14 @@
 <body>
     <div class="sub_wrap">
         <div class="num">
-            <h3><span id="ques_num">1</span>/12</h3>
+            <h3><span id="ques_num"></span>/12</h3>
         </div>
         <div class="ques">
-            <h2 id="ques">당신의 성별은?</h2>
+            <h2 id="ques"></h2>
         </div>
         <div class="btn">
-            <button><a href="" id="answer_1">남자</a></button>
-            <button><a href="" id="answer_2">여자</a></button>
+            <button><a href="" id="answer_1"></a></button>
+            <button><a href="" id="answer_2"></a></button>
         </div>
     </div>
 
@@ -34,14 +34,6 @@
 
         answer_1.addEventListener('click', nextQues)
         answer_2.addEventListener('click', nextQues)
-
-        // 클릭 할때마다 질문 숫자 카운팅 function
-        let quesStartNum = 2
-
-        function nextQues(e) {
-            e.preventDefault();
-            ques_num.textContent = quesStartNum++
-        }
 
         const questions = [{
                 'title': '질문1',
@@ -56,17 +48,35 @@
                     '질문2 답1',
                     '질문2 답2'
                 ]
-            }
+            },
+            {
+                'title': '질문3',
+                'answers': [
+                    '질문3 답1',
+                    '질문3 답2'
+                ]
+            },
         ]
 
+        ques_num.textContent = 1
         ques.textContent = questions[0].title
         answer_1.textContent = questions[0].answers[0]
         answer_2.textContent = questions[0].answers[1]
 
-        console.log(questions[0].title)
-        console.log(questions[0].answers[0])
-        console.log(questions[0].answers[1])
+        let quesStartN = 2
 
+        function nextQues(e) {
+            e.preventDefault();
+
+            // 클릭 할때마다 질문 숫자 카운팅 function
+            ques_num.textContent = quesStartN++
+
+            // 버튼 클릭할때마다 다음 질문으로 카운팅
+            ques.textContent = questions[`${quesStartN-2}`].title
+            answer_1.textContent = questions[`${quesStartN-2}`].answers[0]
+            answer_2.textContent = questions[`${quesStartN-2}`].answers[1]
+
+        }
 
         // $.ajax({
         //     type: "GET",
