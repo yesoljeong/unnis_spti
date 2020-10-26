@@ -39,6 +39,17 @@ $.ajax({
     }
 });
 
+const pic = document.querySelector('#pic');
+const title = document.querySelector('#title');
+const pName = document.querySelector('#pname');
+const desc = document.querySelector('#desc');
+
+const reItemPic = document.querySelector('#re_item_pic')
+const itemTitle = document.querySelector('#item')
+const reCharacterPic = document.querySelector('#re_character_pic')
+const characterTitle = document.querySelector('#character')
+
+// console.log(name, desc, title, pic, itemTitle,reItemPic, characterTitle, reCharacterPic)
 
 // 마지막문제를 풀면 result 페이지가 로드되도록 해야함
 $.ajax({
@@ -48,7 +59,20 @@ $.ajax({
     success: function (response) {
 
         console.log(response)
+
+        const data = response.body
+
+        // MAIN INFO
+        pic.src = data.pic
+        title.textContent = data.title
+        pName.textContent = data.name
+        desc.textContent = data.desc
+
+        // SUB INFO
+
+        itemTitle.textContent = data.recommendItem.alias + data.recommendItem.name
+        characterTitle.textContent = data.recommendCharacter.alias + data.recommendCharacter.name
+
     }
 
 });
-

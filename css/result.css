@@ -1,27 +1,33 @@
-.main_matching {
-    padding-top: 90px
+.wrap {
+    width: 600px;
+    height: auto;
+    border: 1px solid blue;
+    margin: 0 auto;
 }
 
-.main_matching>div {
-    background-image: url("../images/chasonga.png");
-    background-size: 240px;
-    width: 240px;
+.main_matching {
+    padding-top: 15%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.main_matching img {
+    width: 300px;
     height: 300px;
-    background-repeat: no-repeat;
     margin: 0 auto;
-    border: 1px solid red;
+    border-radius: 50%;
 }
 
 .text {
     text-align: center;
-    border: 1px solid red;
     width: 80%;
     margin: 0 auto 50px auto;
 }
 
 .text h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     color: rgb(130 130 130);
-    font-size: 13px;
 }
 
 .text h3 {
@@ -35,12 +41,11 @@
 .text p {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    line-height: 19px;
+    line-height: 22px;
     margin-top: 40px;
 }
 
 .sub_matching {
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -52,6 +57,11 @@
     border-radius: 10px;
     padding: 15px;
     width: 47%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .sub_matching h4 {
@@ -61,45 +71,52 @@
     font-size: 14px;
 }
 
-.sub_matching h5 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+.sub_matching img {
+    padding:10%;
+    width:100%;
     text-align: center;
+    border-radius: 50%;
+    vertical-align: middle;
 }
 
-.sub_matching .item>div,
-.sub_matching .idol>div {
-    border: 1px solid red;
-    height: 100px;
-    margin: 20px 0;
+.sub_matching h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    text-align: center;
 }
 
 .share {
     display: flex;
     justify-content: space-between;
     width: 80%;
-    margin: 50px auto;
-    border: 1px solid red;
+    margin: 70px auto;
 }
 
 .share>div {
     width: 50%;
     text-align: center;
-    border: 1px solid red;
 }
 
 .share .icon {
     width: 50px;
     height: 50px;
-    border: 1px solid red;
     border-radius: 50%;
     background-color: rgb(212 240 245);
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .share i {
     font-size: 30px;
-    padding: 10px;
+    color: rgb(79 79 79);
+    font-weight: 900;
+
+}
+
+.share .icon .fa-share-alt {
+    font-size: 24px;
 }
 
 .share p {
@@ -107,14 +124,26 @@
     margin-top: 7px;
 }
 
+.more {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
 .more h2 {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 22px;
     color: rgb(79 79 79);
+    margin-bottom: 20px;
 }
 
-.more span{
+.more span {
     font-weight: 900;
+}
+
+.more button {
+    box-shadow: none;
+    margin-top: 20px;
+    width: 80%;
 }

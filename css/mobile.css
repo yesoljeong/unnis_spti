@@ -46,3 +46,13 @@
 .sub_wrap .btn button a {
     font-size: 16px;
 }
+
+/* RESULT PAGE */
+.wrap .more button{
+    margin-top:15px;
+}
+
+.main_matching img{
+    width:200px;
+    height:200px;
+}
