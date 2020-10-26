@@ -1,0 +1,48 @@
+/* COMMON */
+.wrap,
+.sub_wrap {
+    width: 100%;
+    /* height:100%; */
+}
+
+/* INDEX PAGE */
+.wrap .title h2 {
+    padding-top: 15%;
+    font-size: 24px;
+}
+
+.wrap button {
+    margin-top: 20%;
+}
+
+.wrap button a {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.wrap .btn .now_count {
+    font-size:12px;
+}
+
+.wrap .img div {
+    width: 100%;
+    margin-top: 8%;
+}
+
+/* QUES PAGE */
+.sub_wrap .num {
+    padding-top: 12%;
+}
+
+.sub_wrap .num h3 {
+    width: 100%;
+    margin-top: 0%;
+}
+
+.sub_wrap .ques h2 {
+    font-size: 20px;
+}
+
+.sub_wrap .btn button a {
+    font-size: 16px;
+}

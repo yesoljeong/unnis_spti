@@ -9,7 +9,7 @@ body,
 
 .wrap,
 .sub_wrap {
-    width: 360px;
+    width: 600px;
     margin: 0 auto;
     position: relative;
     border: 1px solid red;
@@ -64,7 +64,7 @@ body,
     border: 0;
     box-shadow: 5px 5px 10px 2px rgba(183, 208, 212, 0.8);
     margin-top: 80px;
-    width: 80%;
+    width: 90%;
 }
 
 .wrap button a {
@@ -89,7 +89,7 @@ body,
     margin-top: 40px;
 }
 
-/* SUB PAGE */
+/* QUES PAGE */
 .sub_wrap .num {
     text-align: center;
     padding-top: 150px;
@@ -99,19 +99,31 @@ body,
     font-family: 'Roboto', sans-serif;
     color: rgb(189 189 189);
     font-size: 24px;
+    border: 1px solid red;
 }
 
-.sub_wrap .ques {
+.sub_wrap .ques {   
+    border: 1px solid red;
+    width: 90%;
+    height: 100px;
+    margin: 50px auto 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub_wrap .ques h2{
     font-family: 'Roboto', sans-serif;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 900;
+    border: 1px solid red;
     color: rgb(79 79 79);
+    line-height: 36px;
     text-align: center;
-    margin-top: 30px;
 }
 
 .sub_wrap .btn {
-    margin: 70px auto 0 auto;
+    margin: 50px auto 0 auto;
 }
 
 .sub_wrap .btn button {
@@ -121,14 +133,14 @@ body,
     border: 0;
     background-color: rgb(212 240 245);
     box-shadow: 5px 5px 10px 2px rgba(183, 208, 212, 0.8);
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
-    width: 80%;
+    width: 90%;
 }
 
 .sub_wrap .btn button a {
     display: block;
-    padding: 20px 0;
+    padding: 30px 0;
     font-family: 'Roboto', sans-serif;
     color: rgb(79 79 79);
     font-weight: 900;
