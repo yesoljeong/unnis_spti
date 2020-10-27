@@ -1,5 +1,4 @@
 // result page
-
 const pic = document.querySelector('#pic');
 const title = document.querySelector('#title');
 const pName = document.querySelector('#pname');
@@ -10,16 +9,17 @@ const itemTitle = document.querySelector('#item')
 const reCharacterPic = document.querySelector('#re_character_pic')
 const characterTitle = document.querySelector('#character')
 
-console.log(getParam("spti"));
+alert('당신의 STPI = ' + getParam("spti"));
+// console.log(getParam("spti"));
 // console.log(name, desc, title, pic, itemTitle,reItemPic, characterTitle, reCharacterPic)
 
 // 마지막문제를 풀면 result 페이지가 로드되도록 해야함
+
 $.ajax({
     type: "POST",
     url: "https://unnis.yonghochoi.com/result",
-    data: {spti : getParam("spti")},
-    success: function (response) {
-
+    data: {}, // spti : getParam("spti")
+    success: function (response) {    
         console.log(response)
 
         const data = response.body

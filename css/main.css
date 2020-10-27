@@ -35,7 +35,6 @@ body,
     font-family: 'Roboto', sans-serif;
     color: rgb(79 79 79);
     text-align: center;
-    /* border: 1px solid red; */
     margin-bottom: 10px;
     line-height: 37px;
     font-size: 28px;
@@ -93,18 +92,15 @@ body,
 .sub_wrap .num {
     text-align: center;
     padding-top: 20%;
-    /* border:1px solid red; */
 }
 
 .sub_wrap .num h3 {
     font-family: 'Roboto', sans-serif;
     color: rgb(189 189 189);
     font-size: 24px;
-    /* border: 1px solid red; */
 }
 
 .sub_wrap .ques {   
-    /* border: 1px solid red; */
     width: 90%;
     height: 100px;
     margin: 50px auto 0 auto;
@@ -117,7 +113,6 @@ body,
     font-family: 'Roboto', sans-serif;
     font-size: 26px;
     font-weight: 900;
-    /* border: 1px solid red; */
     color: rgb(79 79 79);
     line-height: 36px;
     text-align: center;
@@ -137,25 +132,16 @@ body,
     margin-top: 20px;
     text-align: center;
     width: 90%;
+    height:100px;
+    text-align: center;
 }
 
 .sub_wrap .btn button a {
     display: block;
-    padding: 30px 0;
+    padding: 30px 20px;
     font-family: 'Roboto', sans-serif;
     color: rgb(79 79 79);
-    font-weight: 900;
+    font-weight: 500;
     font-size: 18px;
-}
-
-/* LOADING PAGE */
-h2{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size:50px;
-    /* position: absolute; */
-    /* top:50%;
-    left:50%; */
-    border:1px solid red;
-    display:block;
+    line-height: 25px;
 }
