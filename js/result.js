@@ -11,9 +11,6 @@ const characterTitle = document.querySelector('#character')
 
 // alert('당신의 STPI = ' + getParam("spti"));
 console.log(getParam("spti"));
-// console.log(name, desc, title, pic, itemTitle,reItemPic, characterTitle, reCharacterPic)
-
-// 마지막문제를 풀면 result 페이지가 로드되도록 해야함
 
 $.ajax({
     type: "POST",
@@ -28,14 +25,19 @@ $.ajax({
         pic.src = data.pic
         title.textContent = data.title
         pName.textContent = data.name
-        desc.textContent = data.desc
+
+        for(let i=0; i<desc.length; i++){
+            const newLi = document.createElement('li'); // test.length만큼 li를 만든다 
+            desc.appendChild(newLi) // desc자식요소로 li를 넣는다
+        
+            desc.children[i].textContent = desc[i]
+        }
 
         // SUB INFO
         itemTitle.textContent = data.recommendItem.alias + data.recommendItem.namelo
         characterTitle.textContent = data.recommendCharacter.alias + data.recommendCharacter.name
 
     }
-
 });
 
 // url 에서 parameter 추출

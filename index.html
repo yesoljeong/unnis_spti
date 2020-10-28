@@ -10,6 +10,7 @@
     <link rel="stylesheet" media="screen and (max-width: 767px)" href="css/mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
 </head>
 
 <body>
@@ -22,10 +23,10 @@
             <h3>잘 맞는 화장품 추천까지!</h3>
         </div>
         <div class="btn">
-            <button>              
-                <a href="ques_page.html">테스트 시작하기<br> 
-                    <span class="now_count">현재까지 총 <span id="count">8,000,000,000</span>명이 참여 했어요</span>
-                </a>            
+            <button>
+                <a href="ques_page.html">테스트 시작하기<br>
+                    <span class="now_count">현재까지 총 <span id="count"></span>명이 참여 했어요</span>
+                </a>
             </button>
         </div>
         <div class="img">
@@ -33,10 +34,24 @@
         </div>
     </div>
     <script>
+       
+        // countNum = Number(countNum)
+        // console.log(countNum.toLocaleString());
 
-        const count_num = document.querySelector('#count');
-        console.log(count_num)
-
+            $.ajax({
+                type: "POST",
+                url: "https://unnis.yonghochoi.com/visit-count",
+                data: {},
+                success: function (response) {
+                    let countObj = document.querySelector('#count');      
+                    // 리스폰스에 들어있는 값을 가지고 온다
+                    
+                    const totalCount = response.body.total_count
+                    const count = totalCount.toLocaleString()
+                    
+                    countObj.textContent = count
+                }
+            });
     </script>
 </body>
 

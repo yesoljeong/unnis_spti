@@ -38,11 +38,21 @@
     margin: 10px 0;
 }
 
-.text p {
+.text ul {
+    /* font-family: 'Roboto', sans-serif;
+    font-size: 14px; */
+    line-height: 22px;
+    margin-top: 40px;
+    border:1px solid red;
+}
+
+.text ul li{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 22px;
-    margin-top: 40px;
+    border:1px solid red;
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 .sub_matching {
@@ -112,7 +122,6 @@
     font-size: 30px;
     color: rgb(79 79 79);
     font-weight: 900;
-
 }
 
 .share .icon .fa-share-alt {
