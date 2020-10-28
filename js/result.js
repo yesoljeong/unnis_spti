@@ -9,8 +9,8 @@ const itemTitle = document.querySelector('#item')
 const reCharacterPic = document.querySelector('#re_character_pic')
 const characterTitle = document.querySelector('#character')
 
-alert('당신의 STPI = ' + getParam("spti"));
-// console.log(getParam("spti"));
+// alert('당신의 STPI = ' + getParam("spti"));
+console.log(getParam("spti"));
 // console.log(name, desc, title, pic, itemTitle,reItemPic, characterTitle, reCharacterPic)
 
 // 마지막문제를 풀면 result 페이지가 로드되도록 해야함
