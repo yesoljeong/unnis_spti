@@ -6,17 +6,27 @@ const desc = document.querySelector('#desc');
 
 const reItemPic = document.querySelector('#re_item_pic')
 const itemTitle = document.querySelector('#item')
+const itemDesc = document.querySelector('#item_desc')
 const reCharacterPic = document.querySelector('#re_character_pic')
 const characterTitle = document.querySelector('#character')
+const characterDesc = document.querySelector('#character_desc')
 
 // alert('당신의 STPI = ' + getParam("spti"));
 console.log(getParam("spti"));
+console.log(getParam("gender"));
+
+const test = ['왜', '인돼', '되야지']
 
 $.ajax({
     type: "POST",
-    url: "https://unnis.yonghochoi.com/result",
-    data: {}, // spti : getParam("spti")
-    success: function (response) {    
+    url: `https://unnis.yonghochoi.com/result`,
+    data: JSON.stringify({
+        "spti": getParam("spti"),
+        "gender": getParam("gender")
+    }),
+    contentType: "text/plain",
+    dataType: "json",
+    success: function (response) {
         console.log(response)
 
         const data = response.body
@@ -26,18 +36,23 @@ $.ajax({
         title.textContent = data.title
         pName.textContent = data.name
 
-        for(let i=0; i<desc.length; i++){
+        for (let i = 0; i < data.desc.length; i++) {
+
             const newLi = document.createElement('li'); // test.length만큼 li를 만든다 
-            desc.appendChild(newLi) // desc자식요소로 li를 넣는다
-        
-            desc.children[i].textContent = desc[i]
+            desc.appendChild(newLi); // desc자식요소로 li를 넣는다 
+            desc.children[i].textContent = data.desc[i]
         }
 
         // SUB INFO
-        itemTitle.textContent = data.recommendItem.alias + data.recommendItem.namelo
-        characterTitle.textContent = data.recommendCharacter.alias + data.recommendCharacter.name
+        itemTitle.textContent = data.recommendItem.name
+        reItemPic.src = data.recommendItem.pic
+        itemDesc.textContent = data.recommendItem.desc
+        characterTitle.textContent = data.recommendCharacter.name
+        reCharacterPic.src = data.recommendCharacter.pic
+        characterDesc.textContent = data.recommendCharacter.desc
 
     }
+
 });
 
 // url 에서 parameter 추출
@@ -51,7 +66,9 @@ function getParam(sname) {
     for (var i = 0; i < params.length; i++) {
 
         temp = params[i].split("=");
-        if ([temp[0]] == sname) { sval = temp[1]; }
+        if ([temp[0]] == sname) {
+            sval = temp[1];
+        }
     }
 
     return sval;

@@ -7,12 +7,15 @@ body,
     height: 100%;
 }
 
+.hidden{
+    text-indent: -9999px;
+}
+
 .wrap,
 .sub_wrap {
     width: 600px;
     margin: 0 auto;
     position: relative;
-    border: 1px solid red;
 }
 
 .wrap .logo {
@@ -30,6 +33,10 @@ body,
     font-weight: 900;
 }
 
+.wrap .logo img{
+    width:200px;
+}
+
 .wrap .title h2 {
     padding-top: 25%;
     font-family: 'Roboto', sans-serif;
@@ -38,12 +45,17 @@ body,
     margin-bottom: 10px;
     line-height: 37px;
     font-size: 28px;
+    font-weight: 500;
+}
+
+.wrap .title h2 span{
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
+
 }
 
 .wrap .title h3 {
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
     text-align: center;
     color: rgb(130 130 130);
 }
@@ -69,12 +81,16 @@ body,
 .wrap button a {
     font-family: 'Roboto', sans-serif;
     color: rgb(79 79 79);
-    font-weight: 900;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 21px;
     padding: 15px 0;
     display: block;
     width: 100%;
+}
+
+.wrap button a #count{
+    font-size: 16px;
+    font-weight: 900;
 }
 
 .wrap .img div {

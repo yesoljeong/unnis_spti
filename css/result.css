@@ -1,7 +1,6 @@
 .wrap {
     width: 600px;
     height: auto;
-    border: 1px solid blue;
     margin: 0 auto;
 }
 
@@ -13,7 +12,6 @@
 
 .main_matching img {
     width: 300px;
-    height: 300px;
     margin: 0 auto;
     border-radius: 50%;
 }
@@ -26,8 +24,8 @@
 
 .text h4 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: rgb(130 130 130);
+    color: rgb(150 150 150);
+    font-size: 18px;
 }
 
 .text h3 {
@@ -39,18 +37,14 @@
 }
 
 .text ul {
-    /* font-family: 'Roboto', sans-serif;
-    font-size: 14px; */
     line-height: 22px;
     margin-top: 40px;
-    border:1px solid red;
 }
 
-.text ul li{
+.text ul li {
+    list-style-type: initial;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
     line-height: 22px;
-    border:1px solid red;
     text-align: left;
     margin-bottom: 10px;
 }
@@ -82,8 +76,8 @@
 }
 
 .sub_matching img {
-    padding:10%;
-    width:100%;
+    padding: 10%;
+    width: 100%;
     text-align: center;
     border-radius: 50%;
     vertical-align: middle;
@@ -93,6 +87,15 @@
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     text-align: center;
+    margin-bottom: 10px;
+}
+
+.sub_matching p{
+    font-family: 'Roboto', sans-serif;
+    color:rgb(79 79 79);
+    line-height: 20px;
+    font-size:15px;
+    font-weight: 700;
 }
 
 .share {
@@ -129,8 +132,11 @@
 }
 
 .share p {
-    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
     margin-top: 7px;
+    color:rgb(79 79 79);
+    letter-spacing: .7px;
 }
 
 .more {
@@ -155,4 +161,30 @@
     box-shadow: none;
     margin-top: 20px;
     width: 80%;
+}
+
+.footer {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.footer .footer_logo {
+    text-align: center;
+}
+
+
+.footer .footer_logo h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: rgb(79 79 79);
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+.footer p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color:rgb(130 130 130);
+    margin-bottom: 10px;
 }
