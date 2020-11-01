@@ -188,3 +188,13 @@
     color:rgb(130 130 130);
     margin-bottom: 10px;
 }
+
+.link-btn {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(79 79 79);
+    font-weight: 700;
+    font-size: 21px;
+    padding: 15px 0;
+    display: block;
+    width: 100%;
+}
