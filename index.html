@@ -7,11 +7,17 @@
     <title>mbti 가제</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 767px)" href="css/mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+
     <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="js/jquery.rcounterup.js"></script>
+    <!-- <script src="js/countUp.min.js"></script> -->
     <link rel="icon" href="favicon.ico">
+
 </head>
 
 <body>
@@ -26,7 +32,10 @@
         <div class="btn">
             <button>
                 <a href="ques_page.html">Memulai Tes<br>
-                    <span class="now_count">Saat ini, total ada <span id="count"></span> orang</span>
+
+                    <span class="now_count">Saat ini, total ada <span id="count" class="count-num"></span>
+                        orang</span>
+
                 </a>
             </button>
         </div>
@@ -34,27 +43,30 @@
             <div></div>
         </div>
     </div>
+
+    <script src="js/active.js"></script>
     <script>
-        
-       
-        // countNum = Number(countNum)
-        // console.log(countNum.toLocaleString());
+        // const initCount = 0;
+        // document.querySelector('#count').textContent = initCount.toLocaleString();
 
-            $.ajax({
-                type: "POST",
-                url: "https://unnis.yonghochoi.com/visit-count",
-                data: {},
-                success: function (response) {
-                    let countObj = document.querySelector('#count');      
-                    // 리스폰스에 들어있는 값을 가지고 온다
-                    
-                    const totalCount = response.body.total_count
-                    const count = totalCount.toLocaleString()
+        $.ajax({
+            type: "POST",
+            url: "https://unnis.yonghochoi.com/visit-count",
+            data: {},
+            success: function (response) {
+                let countObj = document.querySelector('#count');
+                // 리스폰스에 들어있는 값을 가지고 온다
 
-                    countObj.textContent = count
+                const totalCount = response.body.total_count
+                const count = totalCount.toLocaleString()
 
-                }
-            });
+                countObj.textContent = count;
+
+                $('.count-num').rCounter({
+                    duration: 30
+                });
+            }
+        });
     </script>
 </body>
 

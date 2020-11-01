@@ -15,8 +15,6 @@ const characterDesc = document.querySelector('#character_desc')
 console.log(getParam("spti"));
 console.log(getParam("gender"));
 
-const test = ['왜', '인돼', '되야지']
-
 $.ajax({
     type: "POST",
     url: `https://unnis.yonghochoi.com/result`,
