@@ -141,7 +141,8 @@
             <h2>More About <span>UNNIS PICK</span></h2>
             <div class="btn">
                 <button><a href="https://unnispick.com" target="_blank">HOMEPAGE</a></button>
-                <button><a href="https://instagram.com/unnis_pick?igshid=1lkj1pvwpra6i" target="_blank">INSTAGRAM</a></button>
+                <button><a href="https://instagram.com/unnis_pick?igshid=1lkj1pvwpra6i"
+                        target="_blank">INSTAGRAM</a></button>
                 <button><a href="mailto:info@k-stylehub.com">PARTNERSHIP</a></button>
             </div>
         </div>
@@ -175,13 +176,17 @@
             e.preventDefault()
 
             const url = document.URL;
-            // console.log(url)
-            url.select();
+            const sharedUrl = document.createElement("textarea");
+            sharedUrl.type = 'hidden';
+            document.body.appendChild(sharedUrl);
+            sharedUrl.value = url;
+            sharedUrl.select();
             const isSuccess = document.execCommand('copy');
+            document.body.removeChild(sharedUrl);
             if (isSuccess) {
-                console.log("copy success");
+                alert("공유 링크가 ");
             } else {
-                console.log("copy fail");
+                alert("copy fail");
             }
         });
 
