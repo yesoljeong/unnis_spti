@@ -12,8 +12,8 @@ const characterTitle = document.querySelector('#character')
 const characterDesc = document.querySelector('#character_desc')
 
 // alert('당신의 STPI = ' + getParam("spti"));
-console.log(getParam("spti"));
-console.log(getParam("gender"));
+// console.log(getParam("spti"));
+// console.log(getParam("gender"));
 
 $.ajax({
     type: "POST",
@@ -68,7 +68,64 @@ function getParam(sname) {
             sval = temp[1];
         }
     }
-
     return sval;
-
 }
+
+const linkBtns = document.querySelectorAll('.link-btn');
+for (var i = 0; i < linkBtns.length; i++) {
+    linkBtns[i].addEventListener('click', (e) => {
+        const data = {
+            category: e.target.dataset.category,
+            gender: getParam('gender'),
+            spti: getParam('spti'),
+        };
+        console.log(data);
+        window.open(e.target.dataset.url, "_blank");
+        $.ajax({
+            type: "POST",
+            url: "https://unnis.yonghochoi.com/stats",
+            data: JSON.stringify(data),
+            success: function (response) {
+                
+            }
+        });
+    });
+    linkBtns[i].addEventListener('mouseover', (e) => {
+        e.target.style.cursor = "pointer";
+    });
+};
+
+const shareBtn = document.querySelector('#share_btn');
+
+shareBtn.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    const url = document.URL;
+    const sharedUrl = document.createElement("textarea");
+    sharedUrl.type = 'hidden';
+    document.body.appendChild(sharedUrl);
+    sharedUrl.value = url;
+    sharedUrl.select();
+    const isSuccess = document.execCommand('copy');
+    document.body.removeChild(sharedUrl);
+    if (isSuccess) {
+        alert("결과 링크가 복사 되었습니다.");
+    } else {
+        alert("copy fail");
+    }
+});
+
+// loading page
+
+const loadingWrap = document.querySelector('.loading_wrap');
+
+// 페이지가 로딩되고 2초 후에 디스플레이가 none으로 변경 되면 됨
+setTimeout(function () {
+    loadingWrap.classList.add('none')
+}, 2000);
+
+
+// whatsApp 버튼을 누르면 결과 url이 바뀌면서 블랭크 처리
+const whatsappA =  document.querySelector('.whatsapp a')
+const url = document.URL;
+whatsappA.href = `https://api.whatsapp.com/send?phone=&text=${url}`

@@ -129,8 +129,8 @@
                 <p>Share</p>
             </div>
             <div>
-                <div class="icon">
-                    <a href="https://api.whatsapp.com/send?phone=&text=www.google.com">
+                <div class="icon whatsapp">
+                    <a href="" target="_blank">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -168,58 +168,7 @@
     <script src="js/result.js"></script>
 
     <script>
-        const linkBtns = document.getElementsByClassName('link-btn');
-        for (var i = 0; i < linkBtns.length; i++) {
-            linkBtns[i].addEventListener('click', (e) => {
-                const data = {
-                    category: e.target.dataset.category,
-                    gender: getParam('gender'),
-                    spti: getParam('spti'),
-                };
-                console.log(data);
-                window.open(e.target.dataset.url, "_blank");
-                $.ajax({
-                    type: "POST",
-                    url: "https://unnis.yonghochoi.com/stats",
-                    data: JSON.stringify(data),
-                    success: function (response) {
-                        
-                    }
-                });
-            });
-            linkBtns[i].addEventListener('mouseover', (e) => {
-                e.target.style.cursor = "pointer";
-            });
-        };
-        
-        const shareBtn = document.querySelector('#share_btn');
 
-        shareBtn.addEventListener("click", (e) => {
-            e.preventDefault()
-
-            const url = document.URL;
-            const sharedUrl = document.createElement("textarea");
-            sharedUrl.type = 'hidden';
-            document.body.appendChild(sharedUrl);
-            sharedUrl.value = url;
-            sharedUrl.select();
-            const isSuccess = document.execCommand('copy');
-            document.body.removeChild(sharedUrl);
-            if (isSuccess) {
-                alert("결과 링크가 복사 되었습니다.");
-            } else {
-                alert("copy fail");
-            }
-        });
-
-        // loading page
-
-        const loadingWrap = document.querySelector('.loading_wrap');
-
-        // 페이지가 로딩되고 2초 후에 디스플레이가 none으로 변경 되면 됨
-        setTimeout(function () {
-            loadingWrap.classList.add('none')
-        }, 2000);
     </script>
 
 </body>
