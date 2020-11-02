@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mbti 가제</title>
+    <title>Mencari Karakter K-Drama yang mirip denganku</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/result.css">
@@ -193,7 +193,6 @@
         };
         
         const shareBtn = document.querySelector('#share_btn');
-        // shareBtn.addEventListener('click', clip);
 
         shareBtn.addEventListener("click", (e) => {
             e.preventDefault()
@@ -207,7 +206,7 @@
             const isSuccess = document.execCommand('copy');
             document.body.removeChild(sharedUrl);
             if (isSuccess) {
-                alert("공유 링크가 ");
+                alert("결과 링크가 복사 되었습니다.");
             } else {
                 alert("copy fail");
             }
@@ -218,7 +217,6 @@
         const loadingWrap = document.querySelector('.loading_wrap');
 
         // 페이지가 로딩되고 2초 후에 디스플레이가 none으로 변경 되면 됨
-
         setTimeout(function () {
             loadingWrap.classList.add('none')
         }, 2000);

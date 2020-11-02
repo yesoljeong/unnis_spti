@@ -159,7 +159,7 @@
 
 .more button {
     box-shadow: none;
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
     width: 80%;
 }
 
