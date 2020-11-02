@@ -17,14 +17,14 @@ const questions = [{
         title: "Saat teman membatalkan janji untuk hangout..", // 친구와의 약속이 취소됐을 때 나는
         answers: [
             `"Aduh.." lalu telfon teman lain dan ajak ketemu`, // 다른 친구에게 연락해서 나오라고 한다.
-            `"Jiakh" kalau gitu santai sendiri aja deh di rumah` // 올ㅋ 개이득" 혼자 집에서 뒹굴뒹굴 거린다.
+            `"Yahh..." kalau gitu santai sendiri aja deh di rumah` // 올ㅋ 개이득" 혼자 집에서 뒹굴뒹굴 거린다.
         ]
     },
     {
         title: "Saat mencoba produk kecantikan yang baru..", //예전에 한번 봤던 화장품에 대해서 나는
         answers: [
-            `Walaupun baru coba sekali, aku inget banget feelingnya`, // 한 번 써봤지만 느낌을 생생하게 기억한다.
-            `Kan baru coba sekali, jadi aku ga bisa menyimpulkan perasaanku` // 한번 써봤는데 어떻게 알아?
+            `Walaupun baru coba sekali, aku suka banget nih!`, // 한 번 써봤지만 느낌을 생생하게 기억한다.
+            `Kan baru coba sekali, jadi aku masih belum yakin.` // 한번 써봤는데 어떻게 알아?
         ]
     },
     {
@@ -38,7 +38,7 @@ const questions = [{
         title: "Saat musim ujian", //시험기간에 나는
         answers: [
             `Aku harus belajar 5x sehari, sesuai dengan jadwal yang aku buat`, // "오늘은 5번까지 공부해야 겠다." 계획대로 차근차근 공부한다.
-            `Santai aja, masih ada 48 jam lagi. Sekarang yang bisa aku lakukan adalah istirahat yang cukup` // "아직 48시간 남았으니 충분하네~ 잠안자고 하면돼" 놀다가 벼락치기 한다.
+            `Santai aja, masih ada 48 jam lagi. Lebih baik aku istirahat yang cukup.` // "아직 48시간 남았으니 충분하네~ 잠안자고 하면돼" 놀다가 벼락치기 한다.
         ]
     },
     {
@@ -84,17 +84,17 @@ const questions = [{
         ]
     },
     {
-        title: "Saat melakukan proyek secara bersama-sama", //팀 프로젝트를 할 때 나는
+        title: "saat melakukan proyek bersama-sama", //팀 프로젝트를 할 때 나는
         answers: [
             `"Kalau kamu ga ada kontribusinya, keluar ya." Lalu kick out peserta dari group`, // "참여안하면 out" 하고 팀원을 퇴출시킨다.
             `Menurutku, tidak apa dikasih kelonggaran yang harus dimaklumi` // "사정이 있겠지"하고 봐준다
         ]
     },
     {
-        title: "Saat teman datang ke rumah dan minta aku kasih tau lokasi suatu hal", //친구가 우리집에 놀러와서 물건을 찾을 때 나는
+        title: "Saat teman datang ke rumah dan ingin meminjam suatu barang", //친구가 우리집에 놀러와서 물건을 찾을 때 나는
         answers: [
             `Kamu langsung tau itu ada dimana. "Ada di laci meja, ketiga dari bawah!"`, // "그거 왼쪽 서랍 세번째 칸에 있어" 라고 정확히 알고 있다.
-            `Kamu ingat-ingat dulu dan bilang "Hmm. coba kayanya ada di meja"` // "음 책상 쪽 한번 봐봐" 대충은 안다.
+            `Kamu ingat-ingat dulu dan bilang, "Hmm.. kayaknya ada di meja"` // "음 책상 쪽 한번 봐봐" 대충은 안다.
         ]
     }
 ];
