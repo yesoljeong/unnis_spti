@@ -17,7 +17,7 @@ const characterDesc = document.querySelector('#character_desc')
 
 $.ajax({
     type: "POST",
-    url: `https://unnis.yonghochoi.com/result`,
+    url: `https://upti-api.unnispick.com/result`,
     data: JSON.stringify({
         "spti": getParam("spti"),
         "gender": getParam("gender")
@@ -83,7 +83,7 @@ for (var i = 0; i < linkBtns.length; i++) {
         window.open(e.target.dataset.url, "_blank");
         $.ajax({
             type: "POST",
-            url: "https://unnis.yonghochoi.com/stats",
+            url: "https://upti-api.unnispick.com/stats",
             data: JSON.stringify(data),
             success: function (response) {
                 
