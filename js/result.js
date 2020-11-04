@@ -11,10 +11,6 @@ const reCharacterPic = document.querySelector('#re_character_pic')
 const characterTitle = document.querySelector('#character')
 const characterDesc = document.querySelector('#character_desc')
 
-// alert('당신의 STPI = ' + getParam("spti"));
-// console.log(getParam("spti"));
-// console.log(getParam("gender"));
-
 $.ajax({
     type: "POST",
     url: `https://upti-api.unnispick.com/result`,
@@ -109,7 +105,7 @@ shareBtn.addEventListener("click", (e) => {
     const isSuccess = document.execCommand('copy');
     document.body.removeChild(sharedUrl);
     if (isSuccess) {
-        alert("결과 링크가 복사 되었습니다.");
+        alert("Tautan telah disalin");
     } else {
         alert("copy fail");
     }
@@ -127,5 +123,6 @@ setTimeout(function () {
 
 // whatsApp 버튼을 누르면 결과 url이 바뀌면서 블랭크 처리
 const whatsappA =  document.querySelector('.whatsapp a')
-const url = document.URL;
-whatsappA.href = `https://api.whatsapp.com/send?phone=&text=${url}`
+const documentUrl = document.URL;
+console.log(documentUrl)
+whatsappA.href = `https://api.whatsapp.com/send?phone=&text=${documentUrl}`
