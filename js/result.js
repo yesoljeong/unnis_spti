@@ -14,10 +14,10 @@ const characterDesc = document.querySelector('#character_desc')
 $.ajax({
     type: "POST",
     url: `https://upti-api.unnispick.com/result`,
-    data: encodeURI(JSON.stringify({
+    data: JSON.stringify({
         "spti": getParam("spti"),
-        "gender": getParam("gender")
-    })),
+        "gender": encodeURI(getParam("gender"))
+    }),
     contentType: "text/plain",
     dataType: "json",
     success: function (response) {
@@ -70,11 +70,11 @@ function getParam(sname) {
 const linkBtns = document.querySelectorAll('.link-btn');
 for (var i = 0; i < linkBtns.length; i++) {
     linkBtns[i].addEventListener('click', (e) => {
-        const data = encodeURI(JSON.stringify({
-            category: e.target.dataset.category,
-            gender: getParam('gender'),
+        const data = JSON.stringify({
+            category: encodeURI(e.target.dataset.category),
+            gender: encodeURI(getParam('gender')),
             spti: getParam('spti'),
-        }));
+        });
         console.log(data);
         window.open(e.target.dataset.url, "_blank");
         $.ajax({
