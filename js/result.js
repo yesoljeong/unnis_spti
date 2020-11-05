@@ -14,10 +14,10 @@ const characterDesc = document.querySelector('#character_desc')
 $.ajax({
     type: "POST",
     url: `https://upti-api.unnispick.com/result`,
-    data: JSON.stringify({
+    data: encodeURI(JSON.stringify({
         "spti": getParam("spti"),
         "gender": getParam("gender")
-    }),
+    })),
     contentType: "text/plain",
     dataType: "json",
     success: function (response) {
@@ -70,17 +70,17 @@ function getParam(sname) {
 const linkBtns = document.querySelectorAll('.link-btn');
 for (var i = 0; i < linkBtns.length; i++) {
     linkBtns[i].addEventListener('click', (e) => {
-        const data = {
+        const data = encodeURI(JSON.stringify({
             category: e.target.dataset.category,
             gender: getParam('gender'),
             spti: getParam('spti'),
-        };
+        }));
         console.log(data);
         window.open(e.target.dataset.url, "_blank");
         $.ajax({
             type: "POST",
             url: "https://upti-api.unnispick.com/stats",
-            data: JSON.stringify(data),
+            data: data,
             success: function (response) {
 
             }
@@ -96,7 +96,7 @@ const shareBtn = document.querySelector('#share_btn');
 shareBtn.addEventListener("click", (e) => {
     e.preventDefault()
 
-    const url = document.URL;
+    const url = encodeURI(document.URL);
     const sharedUrl = document.createElement("textarea");
     sharedUrl.type = 'hidden';
     document.body.appendChild(sharedUrl);
@@ -129,7 +129,7 @@ const whatsappA = document.querySelector('#whats_btn')
 
     // console.log(e.target)
 
-    const documentUrl = document.URL;
+    const documentUrl = encodeURI(document.URL);
     // console.log(documentUrl)
     whatsappA.href = `https://api.whatsapp.com/send?phone=&text=${documentUrl}`
 

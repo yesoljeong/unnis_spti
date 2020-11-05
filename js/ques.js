@@ -134,8 +134,8 @@ function nextQues(e) {
 
             // 마지막 질문에서 결과 페이지로 넘어가는 if문
 
-
-            window.location.href = `/result_page.html?spti=${sptiResult}&gender=${answerArr[0]}`
+            const param = encodeURI(`spti=${sptiResult}&gender=${answerArr[0]}`);
+            window.location.href = `/result_page.html?${param}`;
             // console.log(`/result_page.html?spti=${sptiResult}`)
         }
     } else {
