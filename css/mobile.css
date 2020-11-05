@@ -10,13 +10,13 @@
     font-size: 22px;
 }
 
-.wrap .title h3{
+.wrap .title h3 {
     padding: 0 10px;
     font-size: 15px;
 }
 
 .wrap button {
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .wrap button a {
@@ -25,14 +25,11 @@
 }
 
 .wrap .btn .now_count {
-    font-size:12px;
+    font-size: 12px;
 }
 
-.wrap .img div {
-    width: 80%;
-    margin-top: 8%;
-    background-size:70%;
-    height:230px;
+.wrap .img img {
+    width:50%;
 }
 
 .wrap .logo img {
@@ -58,16 +55,16 @@
 }
 
 /* RESULT PAGE */
-.wrap .more button{
-    margin-top:15px;
+.wrap .more button {
+    margin-top: 15px;
 }
 
-.main_matching img{
-    width:200px;
-    height:200px;
+.main_matching img {
+    width: 200px;
+    height: 200px;
 }
 
-.sub_matching img{
-    width:130px;
-    height:130px;
+.sub_matching img {
+    width: 130px;
+    height: 130px;
 }

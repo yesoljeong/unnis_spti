@@ -40,10 +40,10 @@ body,
     width: 60%;
 }
 
-.wrap .title img{
-    width:70%;
+.wrap .title img {
+    width: 70%;
     margin: 0 auto;
-    display:block;
+    display: block;
 }
 
 .wrap .btn {
@@ -79,15 +79,14 @@ body,
     font-weight: 900;
 }
 
-.wrap .img div {
-    background-image: url('../images/main_tel.png');
-    background-repeat: no-repeat;
-    background-size: 250px;
-    background-position: center;
-    width: 350px;
-    height: 250px;
+.wrap .img {
+    margin-top:4%;
+}
+
+.wrap .img img {
+    width: 60%;
     margin: 0 auto;
-    margin-top: 40px;
+    display: block;
 }
 
 /* QUES PAGE */
