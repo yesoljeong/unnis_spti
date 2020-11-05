@@ -128,7 +128,7 @@
     font-weight: 900;
 }
 
-.share .icon .fa-share-alt {
+.share .icon .fa-share-alt, .share .icon .fa-undo-alt {
     font-size: 24px;
 }
 
