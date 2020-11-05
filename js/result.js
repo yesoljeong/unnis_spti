@@ -82,7 +82,7 @@ for (var i = 0; i < linkBtns.length; i++) {
             url: "https://upti-api.unnispick.com/stats",
             data: JSON.stringify(data),
             success: function (response) {
-                
+
             }
         });
     });
@@ -122,7 +122,17 @@ setTimeout(function () {
 
 
 // whatsApp 버튼을 누르면 결과 url이 바뀌면서 블랭크 처리
-const whatsappA =  document.querySelector('.whatsapp a')
-const documentUrl = document.URL;
-console.log(documentUrl)
-whatsappA.href = `https://api.whatsapp.com/send?phone=&text=${documentUrl}`
+const whatsappA = document.querySelector('#whats_btn')
+
+// whatsappA.addEventListener('click', (e) => {
+    // e.preventDefault()
+
+    // console.log(e.target)
+
+    const documentUrl = document.URL;
+    // console.log(documentUrl)
+    whatsappA.href = `https://api.whatsapp.com/send?phone=&text=${documentUrl}`
+
+    console.log(whatsappA.href)
+
+// });

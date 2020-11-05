@@ -63,14 +63,14 @@ const questions = [{
         ]
     },
     {
-        title: "Saat teman aku bilang dia gagal dalam ujian", //친구가 시험에 떨어졌다고 연락이 왔을 때 나는
+        title: "Saat temanku telfon, dan bilang dia lagi sakit", //친구가 시험에 떨어졌다고 연락이 왔을 때 나는
         answers: [
             `"Emang berapa minimal poin untuk lulus? Ujian apa?"`, // "몇 점 넘어야 하는데? 무슨 시험인데?" 라고 물어본다
             `"Semoga ujian berikutnya kamu bisa lulus ya"` // "다음에 잘 볼 수 있을 거야" 라며 격려한다"
         ]
     },
     {
-        title: "Saat aku menemukan produk kosmetik yang ternyata bagus di kulit-ku", //오랜만에 정말 괜찮은 화장품을 찾았을때 나는
+        title: "Saat aku menemukan produk kosmetik yang ternyata bagus di kulitku", //오랜만에 정말 괜찮은 화장품을 찾았을때 나는
         answers: [
             `"Serius deh kalian harus tau & coba produk ini!!" lalu share ke teman-teman kamu`, //"이 화장품 진짜 장난아니야, 다들 좀 써봐" 하고 동네방네 추천한다.
             `Oh, bagus juga nih produk!` //'오~ 이거 좀 괜찮은데..' 라고 혼자 생각한다.

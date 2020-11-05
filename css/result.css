@@ -66,6 +66,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color:#fff;
 }
 
 .sub_matching h4 {
@@ -170,14 +171,22 @@
 
 .footer .footer_logo {
     text-align: center;
+    /* border:1px solid red; */
 }
 
-
 .footer .footer_logo h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    color: rgb(79 79 79);
-    font-weight: 900;
+    text-indent: -9999px;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.footer .footer_logo img{
+    width:40%;
+    /* border:1px solid blue; */
     margin-bottom: 50px;
 }
 
@@ -187,6 +196,8 @@
     font-weight: 500;
     color:rgb(130 130 130);
     margin-bottom: 10px;
+    padding: 0 30px;
+    line-height: 18px;
 }
 
 .link-btn {
