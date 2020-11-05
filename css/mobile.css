@@ -1,18 +1,20 @@
 /* COMMON */
+
+html,
+body,
+.wrap,
+.sub_wrap {
+    height: 100%;
+}
+
 .wrap,
 .sub_wrap {
     width: 100%;
 }
 
 /* INDEX PAGE */
-.wrap .title h2 {
-    padding-top: 15%;
-    font-size: 22px;
-}
-
-.wrap .title h3 {
-    padding: 0 10px;
-    font-size: 15px;
+.wrap .title img{
+    width:70%;
 }
 
 .wrap button {
@@ -30,6 +32,7 @@
 
 .wrap .img img {
     width:50%;
+    margin-top:5%;
 }
 
 .wrap .logo img {

@@ -112,15 +112,23 @@ shareBtn.addEventListener("click", (e) => {
 
 // loading page
 const loadingWrap = document.querySelector('.loading_wrap');
+const startText = document.querySelector('.start_text')
+const startBtn = document.querySelector('.start_btn')
+console.log(startBtn.style.backgroundColor)
 
-// 페이지가 로딩되고 2초 후에 디스플레이가 none으로 변경 되면 됨
-setTimeout(function () {
-    loadingWrap.classList.add('none')
-}, 2000);
+if(getParam('shared') === "true") {
+    loadingWrap.classList.add('none');
+    startText.textContent = 'Start!'
+    startText.style.fontWeight = '900'
+    startBtn.style.backgroundColor = '#98edfc'
 
+} else {
+    // 페이지가 로딩되고 2초 후에 디스플레이가 none으로 변경 되면 됨
+    setTimeout(function () {
+        loadingWrap.classList.add('none')
+    }, 2000);
+}
 
 // whatsApp 버튼을 누르면 결과 url이 바뀌면서 블랭크 처리
 const whatsappA = document.querySelector('#whats_btn')
-const documentUrl = encodeURI(document.URL);
-
-whatsappA.href = `https://api.whatsapp.com/send?phone=&text=${documentUrl}`
+whatsappA.href = `https://api.whatsapp.com/send?phone=&text=${encodeURIComponent(document.URL)}`
