@@ -133,7 +133,7 @@ body,
     font-size: 26px;
     font-weight: 900;
     color: rgb(79 79 79);
-    line-height: 36px;
+    line-height: 30px;
     text-align: center;
 }
 
@@ -151,16 +151,17 @@ body,
     margin-top: 20px;
     text-align: center;
     width: 90%;
-    height: 100px;
+    height: 90px;
     text-align: center;
 }
 
 .sub_wrap .btn button a {
     display: block;
-    vertical-align: middle;
     font-family: 'Roboto', sans-serif;
     color: rgb(79 79 79);
     font-weight: 500;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 20px;
+    padding: 15px 10px;
+    border: 1px solid red;
 }
