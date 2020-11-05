@@ -4,8 +4,7 @@ const answer1 = document.querySelector('#answer_1');
 const answer2 = document.querySelector('#answer_2');
 
 
-// api를 여기다가 만들고
-
+// api
 const questions = [{
         title: "Pilih Jenis Kelamin Anda.", // 성별을 알려 주세요
         answers: [
@@ -115,8 +114,6 @@ function nextQues(e) {
     const answerNum = parseInt(e.target.name)
     answerArr.push(answerNum)
 
-    console.log(answerArr)
-
     if (pageNum >= questions.length) {
 
         resultF()
@@ -130,13 +127,11 @@ function nextQues(e) {
             ]
 
             const sptiResult = result[0] + result[1] + result[2] + result[3]
-            console.log(sptiResult)
 
             // 마지막 질문에서 결과 페이지로 넘어가는 if문
 
             const param = encodeURI(`spti=${sptiResult}&gender=${answerArr[0]}`);
             window.location.href = `/result_page.html?${param}`;
-            // console.log(`/result_page.html?spti=${sptiResult}`)
         }
     } else {
         upDateQues(pageNum);

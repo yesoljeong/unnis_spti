@@ -21,7 +21,6 @@ $.ajax({
     contentType: "text/plain",
     dataType: "json",
     success: function (response) {
-        console.log(response)
 
         const data = response.body
 
@@ -112,7 +111,6 @@ shareBtn.addEventListener("click", (e) => {
 });
 
 // loading page
-
 const loadingWrap = document.querySelector('.loading_wrap');
 
 // 페이지가 로딩되고 2초 후에 디스플레이가 none으로 변경 되면 됨
@@ -123,16 +121,6 @@ setTimeout(function () {
 
 // whatsApp 버튼을 누르면 결과 url이 바뀌면서 블랭크 처리
 const whatsappA = document.querySelector('#whats_btn')
+const documentUrl = encodeURI(document.URL);
 
-// whatsappA.addEventListener('click', (e) => {
-    // e.preventDefault()
-
-    // console.log(e.target)
-
-    const documentUrl = encodeURI(document.URL);
-    // console.log(documentUrl)
-    whatsappA.href = `https://api.whatsapp.com/send?phone=&text=${documentUrl}`
-
-    console.log(whatsappA.href)
-
-// });
+whatsappA.href = `https://api.whatsapp.com/send?phone=&text=${documentUrl}`
