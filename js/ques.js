@@ -62,7 +62,7 @@ const questions = [{
         ]
     },
     {
-        title: "Saat teman aku bilang dia gagal dalam ujian", //친구가 시험에 떨어졌다고 연락이 왔을 때 나는
+        title: "Saat temanku bilang dia gagal dalam ujian", //친구가 시험에 떨어졌다고 연락이 왔을 때 나는
         answers: [
             `"Emang berapa minimal poin untuk lulus? Ujian apa?"`, // "몇 점 넘어야 하는데? 무슨 시험인데?" 라고 물어본다
             `"Semoga ujian berikutnya kamu bisa lulus ya"` // "다음에 잘 볼 수 있을 거야" 라며 격려한다"
