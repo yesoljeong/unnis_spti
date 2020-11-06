@@ -85,6 +85,7 @@ for (var i = 0; i < linkBtns.length; i++) {
             }
         });
     });
+
     linkBtns[i].addEventListener('mouseover', (e) => {
         e.target.style.cursor = "pointer";
     });
@@ -95,7 +96,7 @@ const shareBtn = document.querySelector('#share_btn');
 shareBtn.addEventListener("click", (e) => {
     e.preventDefault()
 
-    const url = encodeURI(document.URL);
+    const url = `${encodeURI(document.URL)}&shared=true`;
     const sharedUrl = document.createElement("textarea");
     sharedUrl.type = 'hidden';
     document.body.appendChild(sharedUrl);
@@ -114,21 +115,25 @@ shareBtn.addEventListener("click", (e) => {
 const loadingWrap = document.querySelector('.loading_wrap');
 const startText = document.querySelector('.start_text')
 const startBtn = document.querySelector('.start_btn')
-console.log(startBtn.style.backgroundColor)
+const startI = document.querySelector('.fa-undo-alt')
+const whatsappA = document.querySelector('#whats_btn')
 
-if(getParam('shared') === "true") {
+
+whatsappA.addEventListener('click', (e) => {
+    const encode = encodeURIComponent(document.URL + `&shared=true`)
+    e.target.parentNode.href = `https://api.whatsapp.com/send?phone=&text=${encode}`
+})
+
+// 파라메터에 shared가 true면(= 결과값만 링크했을때) 다음과 같이 됨
+if (getParam('shared') === "true") {
     loadingWrap.classList.add('none');
     startText.textContent = 'Start!'
     startText.style.fontWeight = '900'
-    startBtn.style.backgroundColor = '#98edfc'
-
+    startBtn.style.backgroundColor = '#E06A60' //FFEDBF
+    startI.style.color = '#FFEDBF'
 } else {
     // 페이지가 로딩되고 2초 후에 디스플레이가 none으로 변경 되면 됨
     setTimeout(function () {
         loadingWrap.classList.add('none')
     }, 2000);
 }
-
-// whatsApp 버튼을 누르면 결과 url이 바뀌면서 블랭크 처리
-const whatsappA = document.querySelector('#whats_btn')
-whatsappA.href = `https://api.whatsapp.com/send?phone=&text=${encodeURIComponent(document.URL)}`
