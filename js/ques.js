@@ -113,6 +113,7 @@ function nextQues(e) {
 
     const answerNum = parseInt(e.target.name);
     answerArr.push(answerNum);
+    const path = window.location.origin.includes("127.0.0.1") ? "" : "/unnis_spti";
 
     if (pageNum >= questions.length) {
         resultF();
@@ -130,7 +131,8 @@ function nextQues(e) {
             // 마지막 질문에서 결과 페이지로 넘어가는 if문
 
             const param = encodeURI(`spti=${sptiResult}&gender=${answerArr[0]}`);
-            window.location.href = window.location.origin + `/result_page.html?${param}`;
+
+            window.location.href = path + `/result_page.html?${param}`;
         }
     } else {
         upDateQues(pageNum);
